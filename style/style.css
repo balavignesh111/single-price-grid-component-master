@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+  --clr-Cyan: hsl(179, 62%, 43%);
+  --clr-Bright-Yellow: hsl(71, 73%, 54%);
+  --clr-Light-Gray: hsl(204, 43%, 93%);
+  --clr-Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background-color: var(--clr-Light-Gray);
+  font-family: 'Karla', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container */
+.container{
+  width: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+
+/* box */
+.box{
+  padding: 2.5rem;
+}
+
+.box-1{
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.box-2{
+  background-color: var(--clr-Cyan);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  color: white;
+}
+
+.box-3{
+  background-color: hsl(179, 62%, 43%,0.8);
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* content designing and styling*/
+
+/* box-1 */
+.title{
+  color: var(--clr-Cyan);
+  margin-bottom: 1.4rem;
+}
+
+.sub-title{
+  color: var(--clr-Bright-Yellow);
+  margin-bottom: 1rem;
+}
+
+.description{
+  color: var(--clr-Grayish-Blue);
+  line-height: 1.5;
+}
+
+/* box-2 */
+
+.monthly-subscription{
+  margin-bottom: 1rem;
+}
+
+.dollar{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subscription-cost{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.subscription-month{
+  color: var(--clr-Light-Gray);
+}
+.subscription-details{
+  margin-bottom: 2.4rem;
+}
+
+.subscription-button{
+  color: white;
+  background-color: var(--clr-Bright-Yellow);
+  font-size: 15px;
+  font-weight: 800;
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 0rem;
+  border: 2px solid;
+  border-color: var(--clr-Bright-Yellow);
+  border-radius: 5px;
+}
+
+/* box 3 */
+.question{
+  margin-bottom: 1rem;
+}
+
+.question-description{
+  line-height: 1.5;
+  color: var(--clr-Light-Gray);
+}
+
+/* mobile responsive starts here!!! */
+@media screen and (min-width:375px) {
+  .container{
+    width: 20rem;
+    margin: 2rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .box{
+    padding: 1.5rem 1rem;
+  }
+
+  .box-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .box-2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .box-3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}

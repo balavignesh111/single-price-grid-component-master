@@ -127,7 +127,8 @@ body{
   color: var(--clr-Light-Gray);
 }
 
-/* mobile responsive starts here!!! */
+/* mobile responsive starts here!!! 
+It will work for devices which have less than 768 px*/
 @media screen and (max-width:768px) {
   .container{
     width: 20rem;
